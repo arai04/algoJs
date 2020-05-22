@@ -38,3 +38,33 @@ class Point {
     return distance;
   }
 }
+
+
+//array
+
+//行列
+//２つの二次元配列の要素を加算し
+//空の二次元配列に格納する
+const array1 = [
+  [1,3,5],
+  [7,9,11]
+];
+const array2 = [
+  [2,4,6],
+  [8,10,12]
+];
+const array3 = [];
+const arrayTmp = [] ;
+
+const getSum = (row) => {
+  for(let col = 0 ; col < array1[row].length ; col ++){
+    const sum = array1[row][col] + array2[row][col] ;
+    arrayTmp.push(sum);
+  }
+  const removedArray = arrayTmp.splice(0,arrayTmp.length);
+  array3.push(removedArray);
+}
+for ( let i = 0 ; i < array1.length ; i ++ ){
+  getSum(i);
+}
+console.log(array3);
