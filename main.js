@@ -68,3 +68,13 @@ for ( let i = 0 ; i < array1.length ; i ++ ){
   getSum(i);
 }
 console.log(array3);
+
+
+//配列のシャッフル
+const arry = [1,2,3,4,5];
+const arryRnd = [];
+for(let i = arry.length ; i > 0 ; i --){
+  const rnd = Math.floor(Math.random() * arry.length);
+  const removed = arry.splice(rnd,1);
+  arryRnd.push(removed[0]);
+}
